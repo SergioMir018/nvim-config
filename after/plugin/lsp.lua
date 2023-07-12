@@ -5,10 +5,6 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'vim-lsp-typescript',
-  'typescript-language-server',
-  'Metals',
-  'Java Language Server',
   'rust_analyzer',
 })
 

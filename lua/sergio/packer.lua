@@ -14,10 +14,10 @@ return require('packer').startup(function(use)
   }
 
   use ({
-	  "folke/tokyonight.nvim",
+	  "olimorris/onedarkpro.nvim",
 	  as = "catppuccin",
 	  config = function()
-		  vim.cmd('colorscheme tokyonight-night')
+		  vim.cmd('colorscheme onedark')
 	  end
   })
 
@@ -60,7 +60,28 @@ return require('packer').startup(function(use)
 	  --Snippets
 	  {'L3MON4D3/LuaSnip'},
 	  {'rafamadriz/friendly-snippets'},
-	}
+    }
   }
 
+  use {
+    'racer-rust/vim-racer'
+  }
+
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
+  use 'nvim-tree/nvim-web-devicons'
+
+  use {
+  'nvim-tree/nvim-tree.lua',
+  requires = {
+    'nvim-tree/nvim-web-devicons', -- optional
+  },
+}
+
+  use 'echasnovski/mini.base16'
 end)
